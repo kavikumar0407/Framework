@@ -21,6 +21,7 @@ import org.openqa.selenium.WebDriverException;
 public class ScreenShot {
 
 	private WebDriver driver; 
+	public String screenshotPath;
 	
 	// the driver information will be given by selenium test case 
 	public ScreenShot(WebDriver driver){
@@ -30,7 +31,7 @@ public class ScreenShot {
 	public void captureScreenShot(){
 		
 		// to be changed 
-		String path = "C:\\Users\\Naveen\\Desktop\\screenshots\\";
+		String path = "C:\\Users\\KAVITAKUMAR\\Desktop\\Elearning\\screenshots\\";
 		String fileName ="";
 
 		GregorianCalendar calendar = new GregorianCalendar(); 
@@ -64,9 +65,9 @@ public class ScreenShot {
 	}
 	
 
-	public void captureScreenShot(String fileName){
+	public String captureScreenShot(String fileName){
 		
-		String path =  "C:\\Users\\Naveen\\Desktop\\screenshots\\";
+		String path =  "C:/Users/KAVITAKUMAR/Desktop/Elearning/";
 	
 		// 1. create file 
 		// 2. capture screenshot from selenium 
@@ -75,13 +76,15 @@ public class ScreenShot {
 		try {
 			TakesScreenshot takeScreenShot  = (TakesScreenshot) driver; 
 			File file = takeScreenShot.getScreenshotAs(OutputType.FILE);
+			screenshotPath = path+fileName+".png";
+			FileUtils.copyFile(file, new File(screenshotPath));
 			
-			FileUtils.copyFile(file, new File(path +fileName+".png"));
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return screenshotPath;
 		
 		
 	}
