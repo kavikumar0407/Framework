@@ -73,7 +73,7 @@ public class SubscribeUserToClass extends InitializeTest{
 				logger.fail("The status of " + result.getName() +"  FAIL");
 	  
 		// Takes screenshot and saves it with the name of the @Test method
-	  logger.addScreenCaptureFromPath(screenShot.captureScreenShot("Reports"+DateTime+"/Screenshots/"+result.getName()+DateTime));
+	  logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTime+"/Screenshots/"+result.getName()+DateTime));
 		
 		report.flush();
   }

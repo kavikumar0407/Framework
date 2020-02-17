@@ -40,7 +40,7 @@ public class LoginTests extends InitializeTest{
 		
 		
 		//Set up Extent Reports
-		htmlReporter = new ExtentHtmlReporter("C:/Users/KAVITAKUMAR/Desktop/Elearning/Reports"+DateTime+"/SeleniumTest_" + DateTime + ".html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/Reports"+DateTime+"/SeleniumTest_" + DateTime + ".html");
 	
 		report = new ExtentReports();
 		report.attachReporter(htmlReporter);
@@ -61,7 +61,7 @@ public class LoginTests extends InitializeTest{
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn(); 
-		
+			
 	}
 	
 	@AfterMethod
@@ -75,7 +75,7 @@ public class LoginTests extends InitializeTest{
 	  
 		// Takes screenshot and saves it with the name of the @Test method
 		
-		logger.addScreenCaptureFromPath(screenShot.captureScreenShot("Reports"+DateTime+"/Screenshots/"+result.getName()+DateTime));
+		logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTime+"/Screenshots/"+result.getName()+DateTime));
 		
 		report.flush();
 		
