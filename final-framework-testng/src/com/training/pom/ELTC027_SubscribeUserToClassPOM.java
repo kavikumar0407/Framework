@@ -12,13 +12,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class SubscribeUserToClassPOM {
+public class ELTC027_SubscribeUserToClassPOM {
   
 		private WebDriver driver; 
 		private Actions action;
 		private String user1,user2;
 		
-		public SubscribeUserToClassPOM(WebDriver driver) {
+		public ELTC027_SubscribeUserToClassPOM(WebDriver driver) {
 			this.driver = driver; 
 			PageFactory.initElements(driver, this);
 		}

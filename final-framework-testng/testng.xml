@@ -5,11 +5,19 @@
    <test name = "Sample test">
       <classes>
           <class name = "com.training.sanity.tests.LoginTests" />
-          <class name = "com.training.sanity.tests.CreateClass" />
-          <class name = "com.training.sanity.tests.SubscribeUserToClass" />
-           <class name = "com.training.sanity.tests.AddCourseToClass" />
-          <class name = "com.training.sanity.tests.RemoveClasses" />
-           <class name = "com.training.sanity.tests.LogoutTest" />
+          <class name = "com.training.sanity.tests.ELTC026_CreateClass" />
+          <class name = "com.training.sanity.tests.ELTC027_SubscribeUserToClass" />
+          <class name = "com.training.sanity.tests.ELTC028_AddCourseToClass" />
+          <class name = "com.training.sanity.tests.ELTC029_RemoveClasses" />
+         
+          <class name = "com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions" />
+          <class name = "com.training.sanity.tests.ELTC057_CareerPromotions" />
+          <class name = "com.training.sanity.tests.ELTC058_CreateCourseSession" />
+          <class name = "com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser" />
+          <class name = "com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass" />
+          
+           <class name = "com.training.sanity.tests.ELTC030_LogoutTest" />
+         
       </classes>
    </test>
-</suite>	
+</suite>

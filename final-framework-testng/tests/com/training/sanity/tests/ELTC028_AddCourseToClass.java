@@ -1,24 +1,27 @@
 package com.training.sanity.tests;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import com.training.pom.AddCourseToClassPOM;
+import com.training.pom.ELTC028_AddCourseToClassPOM;
 
-public class AddCourseToClass extends InitializeTest{
+public class ELTC028_AddCourseToClass extends InitializeTest{
  
-	private AddCourseToClassPOM addCourseToClassPOM;
+	private ELTC028_AddCourseToClassPOM addCourseToClassPOM;
 	
 	
 	@Test
 	public void clickonSubscribeCourseButton() throws InterruptedException {
-		
-		addCourseToClassPOM = new AddCourseToClassPOM (driver);
-		logger = report.createTest("Click on subscribe course to class button");
+		 dateNow = new Date();
+		 DateTime = df.format(dateNow);
+		 DateTimeCode = df2.format(dateNow);
+		addCourseToClassPOM = new ELTC028_AddCourseToClassPOM (driver);
+		logger = report.createTest("ELTC028 - Click on subscribe course to class button");
 				   
 			   //Pass the stored class name to this method
 			   // It will look for all the td elements with this title
@@ -34,7 +37,7 @@ public class AddCourseToClass extends InitializeTest{
 	  @Test (dependsOnMethods = {"clickonSubscribeCourseButton"})
 	  public void selectCourses()
 	  {
-			  logger = report.createTest("Select 2 courses records to be added ");
+			  logger = report.createTest("ELTC028 - Select 2 courses records to be added ");
 			  // This method will select 2 courses. Actions keydown CNTRL has been used for this
 			  addCourseToClassPOM.selectCoursesFromList();
 			  
@@ -47,7 +50,7 @@ public class AddCourseToClass extends InitializeTest{
 		  
 		  @Test (dependsOnMethods = {"selectCourses"})
 		  public void subscribeCoursesToClass() throws InterruptedException {
-			  logger = report.createTest("Click on subscribe button to subscribe courses");
+			  logger = report.createTest("ELTC028 - Click on subscribe button to subscribe courses");
 			  
 			  // Selected courses need to be subscribed by clicking on the button
 			  addCourseToClassPOM.clickOnSubscribeButton();
@@ -70,8 +73,8 @@ public class AddCourseToClass extends InitializeTest{
 		 				logger.fail("The status of " + result.getName() +"  FAIL");
 		 	  
 		 		// Takes screenshot and saves it with the name of the @Test method
-		 	 logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTime+"/Screenshots/"+result.getName()+DateTime));
-				
+		 	 logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTimeFix+"/Screenshots/"+result.getName()+DateTimeFix));
+					
 		 		report.flush();
 		 		
 		 	}

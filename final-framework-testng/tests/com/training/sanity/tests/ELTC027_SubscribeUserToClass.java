@@ -2,26 +2,29 @@ package com.training.sanity.tests;
 
 import org.testng.annotations.Test;
 
-import com.training.pom.SubscribeUserToClassPOM;
+import com.training.pom.ELTC027_SubscribeUserToClassPOM;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
 
-public class SubscribeUserToClass extends InitializeTest{
+public class ELTC027_SubscribeUserToClass extends InitializeTest{
 	
-	private SubscribeUserToClassPOM subscribeUserToClassPOM ;
+	private ELTC027_SubscribeUserToClassPOM subscribeUserToClassPOM ;
 	
 		
   @Test
   public void clickonSubscribeUserButton() throws InterruptedException {
 	 
-	  subscribeUserToClassPOM = new SubscribeUserToClassPOM (driver);
-	  
-	  logger = report.createTest("Click on subscribe user to class button");
+	  subscribeUserToClassPOM = new ELTC027_SubscribeUserToClassPOM (driver);
+	  dateNow = new Date();
+		 DateTime = df.format(dateNow);
+		 DateTimeCode = df2.format(dateNow);
+	  logger = report.createTest("ELTC027 - Click on subscribe user to class button");
 	 
 	// Click Name header for sorting
 	   subscribeUserToClassPOM.clickNameSortHeader();
@@ -38,7 +41,7 @@ public class SubscribeUserToClass extends InitializeTest{
   @Test (dependsOnMethods = {"clickonSubscribeUserButton"})
   public void selectUsers()
   {
-	  logger = report.createTest("Select 2 user records to be added ");
+	  logger = report.createTest("ELTC027 - Select 2 user records to be added ");
 	  // This method will select 2 users. Actions keydown CNTRL has been used for this
 	  subscribeUserToClassPOM.selectUsersFromList();
 	  
@@ -51,7 +54,7 @@ public class SubscribeUserToClass extends InitializeTest{
   
   @Test (dependsOnMethods = {"selectUsers"})
   public void subscribeUsersToClass() throws InterruptedException {
-	  logger = report.createTest("Click on subscribe button to subscribe users");
+	  logger = report.createTest("ELTC027 - Click on subscribe button to subscribe users");
 	  
 	  // Selected users need to be subscribed by clicking on the button
 	  subscribeUserToClassPOM.clickOnSubscribeButton();
@@ -73,7 +76,7 @@ public class SubscribeUserToClass extends InitializeTest{
 				logger.fail("The status of " + result.getName() +"  FAIL");
 	  
 		// Takes screenshot and saves it with the name of the @Test method
-	  logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTime+"/Screenshots/"+result.getName()+DateTime));
+	  logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTimeFix+"/Screenshots/"+result.getName()+DateTimeFix));
 		
 		report.flush();
   }

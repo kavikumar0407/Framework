@@ -3,14 +3,16 @@
 <suite name="Failed suite [Sample test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Sample test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.AddCourseToClass">
+      <class name="com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions">
         <methods>
-          <include name="subscribeCoursesToClass"/>
+          <include name="clickOnAdminTab"/>
+          <include name="clickOnTrainingSessionsListIcon"/>
+          <include name="selectUserAndSubscribeUserToSession"/>
           <include name="teardown"/>
-          <include name="selectCourses"/>
-          <include name="clickonSubscribeCourseButton"/>
+          <include name="selectAndAddCourseToSession"/>
+          <include name="clickOnSessionsCategoriesListLink"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.AddCourseToClass -->
+      </class> <!-- com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions -->
     </classes>
   </test> <!-- Sample test(failed) -->
 </suite> <!-- Failed suite [Sample test Suite] -->

@@ -11,13 +11,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class AddCourseToClassPOM {
+public class ELTC028_AddCourseToClassPOM {
   
 	private WebDriver driver;
 	private Actions action;
 	String course1,course2;
 	
-	public AddCourseToClassPOM(WebDriver driver) {
+	public ELTC028_AddCourseToClassPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}

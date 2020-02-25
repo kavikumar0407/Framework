@@ -34,13 +34,15 @@ public class LoginTests extends InitializeTest{
 		screenShot = new ScreenShot(driver);
 		
 		// Get current date and time to be used for Extent Reports folder creation
-		df = new SimpleDateFormat("dd-MM-yy_HH-mm");  
+		df = new SimpleDateFormat("dd-MM-yy_HH-mm");
+		df2 = new SimpleDateFormat("ddMMyyHHmm");
 		dateNow = new Date();
 		DateTime = df.format(dateNow);
-		
+		DateTimeCode = df2.format(dateNow);
+		DateTimeFix = df.format(dateNow);
 		
 		//Set up Extent Reports
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/Reports"+DateTime+"/SeleniumTest_" + DateTime + ".html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/Reports"+DateTime+"/SeleniumTest_" + DateTimeFix + ".html");
 	
 		report = new ExtentReports();
 		report.attachReporter(htmlReporter);
@@ -75,7 +77,7 @@ public class LoginTests extends InitializeTest{
 	  
 		// Takes screenshot and saves it with the name of the @Test method
 		
-		logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTime+"/Screenshots/"+result.getName()+DateTime));
+		logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTimeFix+"/Screenshots/"+result.getName()+DateTimeFix));
 		
 		report.flush();
 		

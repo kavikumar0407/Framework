@@ -1,27 +1,30 @@
 package com.training.sanity.tests;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import com.training.pom.LogoutTestPOM;
+import com.training.pom.ELTC030_LogoutTestPOM;
 
-public class LogoutTest extends InitializeTest {
+public class ELTC030_LogoutTest extends InitializeTest {
 	
-	private LogoutTestPOM logoutTestPOM;
+	private ELTC030_LogoutTestPOM logoutTestPOM;
 	
   @Test
   public void clickOnRecordDropdown() throws InterruptedException {
-	  
-	  logoutTestPOM = new LogoutTestPOM(driver);
+	  dateNow = new Date();
+		 DateTime = df.format(dateNow);
+		 DateTimeCode = df2.format(dateNow);
+	  logoutTestPOM = new ELTC030_LogoutTestPOM(driver);
 	  
 	  //Click on the dropdown button
 	 //Verify that the menu options are shown
 	  
-	  logger = report.createTest("Click on record dropdown to get Logout option");
+	  logger = report.createTest("ELTC030 - Click on record dropdown to get Logout option");
 	  Thread.sleep(3000);
 	  System.out.println("goign to click drodown");
 	  logoutTestPOM.clickRecordDropdown();
@@ -50,8 +53,8 @@ public class LogoutTest extends InitializeTest {
 				logger.fail("The status of " + result.getName() +"  FAIL");
 	  
 		// Takes screenshot and saves it with the name of the @Test method
-	  logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTime+"/Screenshots/"+result.getName()+DateTime));
-		
+	  logger.addScreenCaptureFromPath(screenShot.captureScreenShot("/Reports"+DateTimeFix+"/Screenshots/"+result.getName()+DateTimeFix));
+			
 		report.flush();
 		
 	}

@@ -10,12 +10,12 @@ import org.testng.annotations.Test;
 
 
 
-public class RemoveClassesPOM {
+public class ELTC029_RemoveClassesPOM {
  
 	private WebDriver driver;
 	
 	
-	public RemoveClassesPOM(WebDriver driver) {
+	public ELTC029_RemoveClassesPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}

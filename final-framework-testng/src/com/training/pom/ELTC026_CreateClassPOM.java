@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CreateClassPOM {
+public class ELTC026_CreateClassPOM {
 	
 	private WebDriver driver; 
 	
 		
-	public CreateClassPOM(WebDriver driver) {
+	public ELTC026_CreateClassPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}

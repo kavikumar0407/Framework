@@ -1,89 +1,348 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="42" passed="42" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-02-17T11:34:29 IST" name="Sample test Suite" finished-at="2020-02-17T11:37:07 IST" duration-ms="158193">
+  <suite started-at="2020-02-25T12:15:32 IST" name="Sample test Suite" finished-at="2020-02-25T12:23:19 IST" duration-ms="467291">
     <groups>
     </groups>
-    <test started-at="2020-02-17T11:34:29 IST" name="Sample test" finished-at="2020-02-17T11:37:07 IST" duration-ms="158193">
-      <class name="com.training.sanity.tests.SubscribeUserToClass">
-        <test-method signature="clickonSubscribeUserButton()[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8]" started-at="2020-02-17T11:35:56 IST" name="clickonSubscribeUserButton" finished-at="2020-02-17T11:36:07 IST" duration-ms="10965" status="PASS">
+    <test started-at="2020-02-25T12:15:32 IST" name="Sample test" finished-at="2020-02-25T12:23:19 IST" duration-ms="467291">
+      <class name="com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass">
+        <test-method signature="clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:09 IST" name="clickOnAdminTab" finished-at="2020-02-25T12:21:12 IST" duration-ms="3174" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickonSubscribeUserButton -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8]" started-at="2020-02-17T11:36:07 IST" name="teardown" finished-at="2020-02-17T11:36:08 IST" duration-ms="1398" status="PASS">
+        </test-method> <!-- clickOnAdminTab -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:12 IST" name="teardown" finished-at="2020-02-25T12:21:12 IST" duration-ms="594" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickonSubscribeUserButton status=SUCCESS method=SubscribeUserToClass.clickonSubscribeUserButton()[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8] output={null}]]]>
+                <![CDATA[[TestResult name=clickOnAdminTab status=SUCCESS method=ELTC060_CreateUserSubscribeUserToClass.clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="selectUsers()[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8]" started-at="2020-02-17T11:36:08 IST" name="selectUsers" finished-at="2020-02-17T11:36:10 IST" depends-on-methods="com.training.sanity.tests.SubscribeUserToClass.clickonSubscribeUserButton" duration-ms="2274" status="PASS">
+        <test-method signature="clickOnCreateNewUserLink()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:12 IST" name="clickOnCreateNewUserLink" finished-at="2020-02-25T12:21:14 IST" depends-on-methods="com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass.clickOnAdminTab" duration-ms="1499" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectUsers -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8]" started-at="2020-02-17T11:36:10 IST" name="teardown" finished-at="2020-02-17T11:36:11 IST" duration-ms="1204" status="PASS">
+        </test-method> <!-- clickOnCreateNewUserLink -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:14 IST" name="teardown" finished-at="2020-02-25T12:21:14 IST" duration-ms="584" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectUsers status=SUCCESS method=SubscribeUserToClass.selectUsers()[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8] output={null}]]]>
+                <![CDATA[[TestResult name=clickOnCreateNewUserLink status=SUCCESS method=ELTC060_CreateUserSubscribeUserToClass.clickOnCreateNewUserLink()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="subscribeUsersToClass()[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8]" started-at="2020-02-17T11:36:11 IST" name="subscribeUsersToClass" finished-at="2020-02-17T11:36:24 IST" depends-on-methods="com.training.sanity.tests.SubscribeUserToClass.selectUsers" duration-ms="12883" status="PASS">
+        <test-method signature="enterUserDetails()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:14 IST" name="enterUserDetails" finished-at="2020-02-25T12:21:20 IST" depends-on-methods="com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass.clickOnCreateNewUserLink" duration-ms="5206" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- subscribeUsersToClass -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8]" started-at="2020-02-17T11:36:24 IST" name="teardown" finished-at="2020-02-17T11:36:26 IST" duration-ms="1480" status="PASS">
+        </test-method> <!-- enterUserDetails -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:20 IST" name="teardown" finished-at="2020-02-25T12:21:20 IST" duration-ms="548" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=subscribeUsersToClass status=SUCCESS method=SubscribeUserToClass.subscribeUsersToClass()[pri:0, instance:com.training.sanity.tests.SubscribeUserToClass@318ba8c8] output={null}]]]>
+                <![CDATA[[TestResult name=enterUserDetails status=SUCCESS method=ELTC060_CreateUserSubscribeUserToClass.enterUserDetails()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.training.sanity.tests.SubscribeUserToClass -->
-      <class name="com.training.sanity.tests.RemoveClasses">
-        <test-method signature="clickOnDeleteButton()[pri:0, instance:com.training.sanity.tests.RemoveClasses@3c9d0b9d]" started-at="2020-02-17T11:36:48 IST" name="clickOnDeleteButton" finished-at="2020-02-17T11:36:57 IST" duration-ms="8854" status="PASS">
+        <test-method signature="clickOnClassLink()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:20 IST" name="clickOnClassLink" finished-at="2020-02-25T12:21:24 IST" depends-on-methods="com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass.enterUserDetails" duration-ms="3910" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnDeleteButton -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.RemoveClasses@3c9d0b9d]" started-at="2020-02-17T11:36:57 IST" name="teardown" finished-at="2020-02-17T11:36:58 IST" duration-ms="1171" status="PASS">
+        </test-method> <!-- clickOnClassLink -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:24 IST" name="teardown" finished-at="2020-02-25T12:21:25 IST" duration-ms="611" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickOnDeleteButton status=SUCCESS method=RemoveClasses.clickOnDeleteButton()[pri:0, instance:com.training.sanity.tests.RemoveClasses@3c9d0b9d] output={null}]]]>
+                <![CDATA[[TestResult name=clickOnClassLink status=SUCCESS method=ELTC060_CreateUserSubscribeUserToClass.clickOnClassLink()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.training.sanity.tests.RemoveClasses -->
+        <test-method signature="createNewClass()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:25 IST" name="createNewClass" finished-at="2020-02-25T12:21:31 IST" depends-on-methods="com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass.clickOnClassLink" duration-ms="6625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewClass -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:31 IST" name="teardown" finished-at="2020-02-25T12:21:32 IST" duration-ms="504" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createNewClass status=SUCCESS method=ELTC060_CreateUserSubscribeUserToClass.createNewClass()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="subscribeUserToClass()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:21:32 IST" name="subscribeUserToClass" finished-at="2020-02-25T12:22:24 IST" depends-on-methods="com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass.createNewClass" duration-ms="51834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscribeUserToClass -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:22:24 IST" name="teardown" finished-at="2020-02-25T12:22:24 IST" duration-ms="533" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=subscribeUserToClass status=SUCCESS method=ELTC060_CreateUserSubscribeUserToClass.subscribeUserToClass()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="subscribeCourseToClass()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:22:24 IST" name="subscribeCourseToClass" finished-at="2020-02-25T12:23:12 IST" depends-on-methods="com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass.subscribeUserToClass" duration-ms="47929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscribeCourseToClass -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49]" started-at="2020-02-25T12:23:12 IST" name="teardown" finished-at="2020-02-25T12:23:13 IST" duration-ms="535" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=subscribeCourseToClass status=SUCCESS method=ELTC060_CreateUserSubscribeUserToClass.subscribeCourseToClass()[pri:0, instance:com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass@75329a49] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass -->
+      <class name="com.training.sanity.tests.ELTC028_AddCourseToClass">
+        <test-method signature="clickonSubscribeCourseButton()[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8]" started-at="2020-02-25T12:16:33 IST" name="clickonSubscribeCourseButton" finished-at="2020-02-25T12:16:38 IST" duration-ms="4546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickonSubscribeCourseButton -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8]" started-at="2020-02-25T12:16:38 IST" name="teardown" finished-at="2020-02-25T12:16:39 IST" duration-ms="625" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickonSubscribeCourseButton status=SUCCESS method=ELTC028_AddCourseToClass.clickonSubscribeCourseButton()[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="selectCourses()[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8]" started-at="2020-02-25T12:16:39 IST" name="selectCourses" finished-at="2020-02-25T12:16:39 IST" depends-on-methods="com.training.sanity.tests.ELTC028_AddCourseToClass.clickonSubscribeCourseButton" duration-ms="559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectCourses -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8]" started-at="2020-02-25T12:16:39 IST" name="teardown" finished-at="2020-02-25T12:16:40 IST" duration-ms="582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectCourses status=SUCCESS method=ELTC028_AddCourseToClass.selectCourses()[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="subscribeCoursesToClass()[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8]" started-at="2020-02-25T12:16:40 IST" name="subscribeCoursesToClass" finished-at="2020-02-25T12:16:47 IST" depends-on-methods="com.training.sanity.tests.ELTC028_AddCourseToClass.selectCourses" duration-ms="7827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscribeCoursesToClass -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8]" started-at="2020-02-25T12:16:47 IST" name="teardown" finished-at="2020-02-25T12:16:48 IST" duration-ms="534" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=subscribeCoursesToClass status=SUCCESS method=ELTC028_AddCourseToClass.subscribeCoursesToClass()[pri:0, instance:com.training.sanity.tests.ELTC028_AddCourseToClass@7ee955a8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.training.sanity.tests.ELTC028_AddCourseToClass -->
+      <class name="com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser">
+        <test-method signature="clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:28 IST" name="clickOnAdminTab" finished-at="2020-02-25T12:19:31 IST" duration-ms="3382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnAdminTab -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:31 IST" name="teardown" finished-at="2020-02-25T12:19:32 IST" duration-ms="530" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnAdminTab status=SUCCESS method=ELTC059_CreateCourseSubscribeUser.clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="clickOnCreateNewCourseLink()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:32 IST" name="clickOnCreateNewCourseLink" finished-at="2020-02-25T12:19:33 IST" depends-on-methods="com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser.clickOnAdminTab" duration-ms="1171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCreateNewCourseLink -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:33 IST" name="teardown" finished-at="2020-02-25T12:19:33 IST" duration-ms="500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnCreateNewCourseLink status=SUCCESS method=ELTC059_CreateCourseSubscribeUser.clickOnCreateNewCourseLink()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="enterDetailsToCreateNewCourse()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:33 IST" name="enterDetailsToCreateNewCourse" finished-at="2020-02-25T12:19:46 IST" depends-on-methods="com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser.clickOnCreateNewCourseLink" duration-ms="12966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterDetailsToCreateNewCourse -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:46 IST" name="teardown" finished-at="2020-02-25T12:19:47 IST" duration-ms="532" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=enterDetailsToCreateNewCourse status=SUCCESS method=ELTC059_CreateCourseSubscribeUser.enterDetailsToCreateNewCourse()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="clickOnClassLink()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:47 IST" name="clickOnClassLink" finished-at="2020-02-25T12:19:51 IST" depends-on-methods="com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser.enterDetailsToCreateNewCourse" duration-ms="4390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnClassLink -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:51 IST" name="teardown" finished-at="2020-02-25T12:19:52 IST" duration-ms="620" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnClassLink status=SUCCESS method=ELTC059_CreateCourseSubscribeUser.clickOnClassLink()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="createNewClass()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:52 IST" name="createNewClass" finished-at="2020-02-25T12:19:58 IST" depends-on-methods="com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser.clickOnClassLink" duration-ms="6299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewClass -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:58 IST" name="teardown" finished-at="2020-02-25T12:19:59 IST" duration-ms="516" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createNewClass status=SUCCESS method=ELTC059_CreateCourseSubscribeUser.createNewClass()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="subscribeUserToClass()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:19:59 IST" name="subscribeUserToClass" finished-at="2020-02-25T12:20:19 IST" depends-on-methods="com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser.createNewClass" duration-ms="19821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscribeUserToClass -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:20:19 IST" name="teardown" finished-at="2020-02-25T12:20:19 IST" duration-ms="544" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=subscribeUserToClass status=SUCCESS method=ELTC059_CreateCourseSubscribeUser.subscribeUserToClass()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="subscribeCourseToClass()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:20:19 IST" name="subscribeCourseToClass" finished-at="2020-02-25T12:21:08 IST" depends-on-methods="com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser.subscribeUserToClass" duration-ms="49017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscribeCourseToClass -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c]" started-at="2020-02-25T12:21:08 IST" name="teardown" finished-at="2020-02-25T12:21:09 IST" duration-ms="433" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=subscribeCourseToClass status=SUCCESS method=ELTC059_CreateCourseSubscribeUser.subscribeCourseToClass()[pri:0, instance:com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser@6d2a209c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser -->
+      <class name="com.training.sanity.tests.ELTC058_CreateCourseSession">
+        <test-method signature="clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74]" started-at="2020-02-25T12:18:12 IST" name="clickOnAdminTab" finished-at="2020-02-25T12:18:15 IST" duration-ms="3236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnAdminTab -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74]" started-at="2020-02-25T12:18:15 IST" name="teardown" finished-at="2020-02-25T12:18:16 IST" duration-ms="509" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnAdminTab status=SUCCESS method=ELTC058_CreateCourseSession.clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="clickOnCreateNewCourseLink()[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74]" started-at="2020-02-25T12:18:16 IST" name="clickOnCreateNewCourseLink" finished-at="2020-02-25T12:18:17 IST" depends-on-methods="com.training.sanity.tests.ELTC058_CreateCourseSession.clickOnAdminTab" duration-ms="1458" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCreateNewCourseLink -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74]" started-at="2020-02-25T12:18:17 IST" name="teardown" finished-at="2020-02-25T12:18:18 IST" duration-ms="463" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnCreateNewCourseLink status=SUCCESS method=ELTC058_CreateCourseSession.clickOnCreateNewCourseLink()[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="enterDetailsToCreateNewCourse()[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74]" started-at="2020-02-25T12:18:18 IST" name="enterDetailsToCreateNewCourse" finished-at="2020-02-25T12:18:31 IST" depends-on-methods="com.training.sanity.tests.ELTC058_CreateCourseSession.clickOnCreateNewCourseLink" duration-ms="13588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterDetailsToCreateNewCourse -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74]" started-at="2020-02-25T12:18:31 IST" name="teardown" finished-at="2020-02-25T12:18:32 IST" duration-ms="648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=enterDetailsToCreateNewCourse status=SUCCESS method=ELTC058_CreateCourseSession.enterDetailsToCreateNewCourse()[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="clickOnAddTrainingSession()[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74]" started-at="2020-02-25T12:18:32 IST" name="clickOnAddTrainingSession" finished-at="2020-02-25T12:19:27 IST" depends-on-methods="com.training.sanity.tests.ELTC058_CreateCourseSession.enterDetailsToCreateNewCourse" duration-ms="55136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnAddTrainingSession -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74]" started-at="2020-02-25T12:19:27 IST" name="teardown" finished-at="2020-02-25T12:19:28 IST" duration-ms="538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnAddTrainingSession status=SUCCESS method=ELTC058_CreateCourseSession.clickOnAddTrainingSession()[pri:0, instance:com.training.sanity.tests.ELTC058_CreateCourseSession@5e316c74] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.training.sanity.tests.ELTC058_CreateCourseSession -->
       <class name="com.training.sanity.tests.LoginTests">
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@63a65a25]" started-at="2020-02-17T11:34:29 IST" name="setUpBeforeClass" finished-at="2020-02-17T11:34:55 IST" duration-ms="25558" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@51e5fc98]" started-at="2020-02-25T12:15:32 IST" name="setUpBeforeClass" finished-at="2020-02-25T12:15:53 IST" duration-ms="21359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@63a65a25]" started-at="2020-02-17T11:34:55 IST" name="validLoginTest" finished-at="2020-02-17T11:35:02 IST" duration-ms="7635" status="PASS">
+        <test-method signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@51e5fc98]" started-at="2020-02-25T12:15:53 IST" name="validLoginTest" finished-at="2020-02-25T12:15:58 IST" duration-ms="5028" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.LoginTests@63a65a25]" started-at="2020-02-17T11:35:02 IST" name="teardown" finished-at="2020-02-17T11:35:08 IST" duration-ms="5102" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.LoginTests@51e5fc98]" started-at="2020-02-25T12:15:58 IST" name="teardown" finished-at="2020-02-25T12:15:59 IST" duration-ms="999" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validLoginTest status=SUCCESS method=LoginTests.validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@63a65a25] output={null}]]]>
+                <![CDATA[[TestResult name=validLoginTest status=SUCCESS method=LoginTests.validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@51e5fc98] output={null}]]]>
               </value>
             </param>
           </params>
@@ -91,147 +350,318 @@
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.training.sanity.tests.LoginTests -->
-      <class name="com.training.sanity.tests.AddCourseToClass">
-        <test-method signature="clickonSubscribeCourseButton()[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d]" started-at="2020-02-17T11:36:26 IST" name="clickonSubscribeCourseButton" finished-at="2020-02-17T11:36:32 IST" duration-ms="5692" status="PASS">
+      <class name="com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions">
+        <test-method signature="clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:16:56 IST" name="clickOnAdminTab" finished-at="2020-02-25T12:16:57 IST" duration-ms="1032" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickonSubscribeCourseButton -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d]" started-at="2020-02-17T11:36:32 IST" name="teardown" finished-at="2020-02-17T11:36:33 IST" duration-ms="1268" status="PASS">
+        </test-method> <!-- clickOnAdminTab -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:16:57 IST" name="teardown" finished-at="2020-02-25T12:16:58 IST" duration-ms="591" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickonSubscribeCourseButton status=SUCCESS method=AddCourseToClass.clickonSubscribeCourseButton()[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d] output={null}]]]>
+                <![CDATA[[TestResult name=clickOnAdminTab status=SUCCESS method=ELTC056_SubscribeUsersCoursesToSessions.clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="selectCourses()[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d]" started-at="2020-02-17T11:36:33 IST" name="selectCourses" finished-at="2020-02-17T11:36:34 IST" depends-on-methods="com.training.sanity.tests.AddCourseToClass.clickonSubscribeCourseButton" duration-ms="1368" status="PASS">
+        <test-method signature="clickOnSessionsCategoriesListLink()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:16:58 IST" name="clickOnSessionsCategoriesListLink" finished-at="2020-02-25T12:17:01 IST" depends-on-methods="com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions.clickOnAdminTab" duration-ms="3164" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectCourses -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d]" started-at="2020-02-17T11:36:34 IST" name="teardown" finished-at="2020-02-17T11:36:36 IST" duration-ms="1379" status="PASS">
+        </test-method> <!-- clickOnSessionsCategoriesListLink -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:17:01 IST" name="teardown" finished-at="2020-02-25T12:17:02 IST" duration-ms="577" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectCourses status=SUCCESS method=AddCourseToClass.selectCourses()[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d] output={null}]]]>
+                <![CDATA[[TestResult name=clickOnSessionsCategoriesListLink status=SUCCESS method=ELTC056_SubscribeUsersCoursesToSessions.clickOnSessionsCategoriesListLink()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="subscribeCoursesToClass()[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d]" started-at="2020-02-17T11:36:36 IST" name="subscribeCoursesToClass" finished-at="2020-02-17T11:36:47 IST" depends-on-methods="com.training.sanity.tests.AddCourseToClass.selectCourses" duration-ms="11135" status="PASS">
+        <test-method signature="clickOnTrainingSessionsListIcon()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:17:02 IST" name="clickOnTrainingSessionsListIcon" finished-at="2020-02-25T12:17:03 IST" depends-on-methods="com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions.clickOnSessionsCategoriesListLink" duration-ms="1363" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- subscribeCoursesToClass -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d]" started-at="2020-02-17T11:36:47 IST" name="teardown" finished-at="2020-02-17T11:36:48 IST" duration-ms="1323" status="PASS">
+        </test-method> <!-- clickOnTrainingSessionsListIcon -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:17:03 IST" name="teardown" finished-at="2020-02-25T12:17:03 IST" duration-ms="581" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=subscribeCoursesToClass status=SUCCESS method=AddCourseToClass.subscribeCoursesToClass()[pri:0, instance:com.training.sanity.tests.AddCourseToClass@6dbb137d] output={null}]]]>
+                <![CDATA[[TestResult name=clickOnTrainingSessionsListIcon status=SUCCESS method=ELTC056_SubscribeUsersCoursesToSessions.clickOnTrainingSessionsListIcon()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.training.sanity.tests.AddCourseToClass -->
-      <class name="com.training.sanity.tests.LogoutTest">
-        <test-method signature="clickOnRecordDropdown()[pri:0, instance:com.training.sanity.tests.LogoutTest@43301423]" started-at="2020-02-17T11:36:58 IST" name="clickOnRecordDropdown" finished-at="2020-02-17T11:37:02 IST" duration-ms="3555" status="PASS">
+        <test-method signature="selectUserAndSubscribeUserToSession()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:17:03 IST" name="selectUserAndSubscribeUserToSession" finished-at="2020-02-25T12:17:14 IST" depends-on-methods="com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions.clickOnTrainingSessionsListIcon" duration-ms="10321" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnRecordDropdown -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.LogoutTest@43301423]" started-at="2020-02-17T11:37:02 IST" name="teardown" finished-at="2020-02-17T11:37:03 IST" duration-ms="1630" status="PASS">
+        </test-method> <!-- selectUserAndSubscribeUserToSession -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:17:14 IST" name="teardown" finished-at="2020-02-25T12:17:14 IST" duration-ms="645" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickOnRecordDropdown status=SUCCESS method=LogoutTest.clickOnRecordDropdown()[pri:0, instance:com.training.sanity.tests.LogoutTest@43301423] output={null}]]]>
+                <![CDATA[[TestResult name=selectUserAndSubscribeUserToSession status=SUCCESS method=ELTC056_SubscribeUsersCoursesToSessions.selectUserAndSubscribeUserToSession()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="clickLogoutButoon()[pri:0, instance:com.training.sanity.tests.LogoutTest@43301423]" started-at="2020-02-17T11:37:03 IST" name="clickLogoutButoon" finished-at="2020-02-17T11:37:06 IST" depends-on-methods="com.training.sanity.tests.LogoutTest.clickOnRecordDropdown" duration-ms="2724" status="PASS">
+        <test-method signature="selectAndAddCourseToSession()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:17:14 IST" name="selectAndAddCourseToSession" finished-at="2020-02-25T12:17:26 IST" depends-on-methods="com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions.selectUserAndSubscribeUserToSession" duration-ms="11083" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickLogoutButoon -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.LogoutTest@43301423]" started-at="2020-02-17T11:37:06 IST" name="teardown" finished-at="2020-02-17T11:37:07 IST" duration-ms="1168" status="PASS">
+        </test-method> <!-- selectAndAddCourseToSession -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47]" started-at="2020-02-25T12:17:26 IST" name="teardown" finished-at="2020-02-25T12:17:26 IST" duration-ms="612" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickLogoutButoon status=SUCCESS method=LogoutTest.clickLogoutButoon()[pri:0, instance:com.training.sanity.tests.LogoutTest@43301423] output={null}]]]>
+                <![CDATA[[TestResult name=selectAndAddCourseToSession status=SUCCESS method=ELTC056_SubscribeUsersCoursesToSessions.selectAndAddCourseToSession()[pri:0, instance:com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions@48fa0f47] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.training.sanity.tests.LogoutTest -->
-      <class name="com.training.sanity.tests.CreateClass">
-        <test-method signature="clickAdminTab()[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7]" started-at="2020-02-17T11:35:08 IST" name="clickAdminTab" finished-at="2020-02-17T11:35:15 IST" duration-ms="7454" status="PASS">
+      </class> <!-- com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions -->
+      <class name="com.training.sanity.tests.ELTC027_SubscribeUserToClass">
+        <test-method signature="clickonSubscribeUserButton()[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6]" started-at="2020-02-25T12:16:14 IST" name="clickonSubscribeUserButton" finished-at="2020-02-25T12:16:23 IST" duration-ms="8900" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickonSubscribeUserButton -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6]" started-at="2020-02-25T12:16:23 IST" name="teardown" finished-at="2020-02-25T12:16:23 IST" duration-ms="482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickonSubscribeUserButton status=SUCCESS method=ELTC027_SubscribeUserToClass.clickonSubscribeUserButton()[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="selectUsers()[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6]" started-at="2020-02-25T12:16:23 IST" name="selectUsers" finished-at="2020-02-25T12:16:24 IST" depends-on-methods="com.training.sanity.tests.ELTC027_SubscribeUserToClass.clickonSubscribeUserButton" duration-ms="459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectUsers -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6]" started-at="2020-02-25T12:16:24 IST" name="teardown" finished-at="2020-02-25T12:16:24 IST" duration-ms="548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectUsers status=SUCCESS method=ELTC027_SubscribeUserToClass.selectUsers()[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="subscribeUsersToClass()[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6]" started-at="2020-02-25T12:16:24 IST" name="subscribeUsersToClass" finished-at="2020-02-25T12:16:33 IST" depends-on-methods="com.training.sanity.tests.ELTC027_SubscribeUserToClass.selectUsers" duration-ms="8578" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscribeUsersToClass -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6]" started-at="2020-02-25T12:16:33 IST" name="teardown" finished-at="2020-02-25T12:16:33 IST" duration-ms="507" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=subscribeUsersToClass status=SUCCESS method=ELTC027_SubscribeUserToClass.subscribeUsersToClass()[pri:0, instance:com.training.sanity.tests.ELTC027_SubscribeUserToClass@12e61fe6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.training.sanity.tests.ELTC027_SubscribeUserToClass -->
+      <class name="com.training.sanity.tests.ELTC057_CareerPromotions">
+        <test-method signature="clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:26 IST" name="clickOnAdminTab" finished-at="2020-02-25T12:17:30 IST" duration-ms="4330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnAdminTab -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:30 IST" name="teardown" finished-at="2020-02-25T12:17:31 IST" duration-ms="521" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnAdminTab status=SUCCESS method=ELTC057_CareerPromotions.clickOnAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="clickOnCareersPromotionsLink()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:31 IST" name="clickOnCareersPromotionsLink" finished-at="2020-02-25T12:17:36 IST" depends-on-methods="com.training.sanity.tests.ELTC057_CareerPromotions.clickOnAdminTab" duration-ms="4633" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCareersPromotionsLink -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:36 IST" name="teardown" finished-at="2020-02-25T12:17:36 IST" duration-ms="633" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnCareersPromotionsLink status=SUCCESS method=ELTC057_CareerPromotions.clickOnCareersPromotionsLink()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="createCareer()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:36 IST" name="createCareer" finished-at="2020-02-25T12:17:45 IST" depends-on-methods="com.training.sanity.tests.ELTC057_CareerPromotions.clickOnCareersPromotionsLink" duration-ms="8368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCareer -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:45 IST" name="teardown" finished-at="2020-02-25T12:17:45 IST" duration-ms="502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createCareer status=SUCCESS method=ELTC057_CareerPromotions.createCareer()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="createPromotion()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:45 IST" name="createPromotion" finished-at="2020-02-25T12:17:54 IST" depends-on-methods="com.training.sanity.tests.ELTC057_CareerPromotions.createCareer" duration-ms="9160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPromotion -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:54 IST" name="teardown" finished-at="2020-02-25T12:17:55 IST" duration-ms="578" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createPromotion status=SUCCESS method=ELTC057_CareerPromotions.createPromotion()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="createTrainingSession()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:17:55 IST" name="createTrainingSession" finished-at="2020-02-25T12:18:12 IST" depends-on-methods="com.training.sanity.tests.ELTC057_CareerPromotions.createPromotion" duration-ms="16910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTrainingSession -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091]" started-at="2020-02-25T12:18:12 IST" name="teardown" finished-at="2020-02-25T12:18:12 IST" duration-ms="467" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createTrainingSession status=SUCCESS method=ELTC057_CareerPromotions.createTrainingSession()[pri:0, instance:com.training.sanity.tests.ELTC057_CareerPromotions@6ac13091] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.training.sanity.tests.ELTC057_CareerPromotions -->
+      <class name="com.training.sanity.tests.ELTC026_CreateClass">
+        <test-method signature="clickAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48]" started-at="2020-02-25T12:15:59 IST" name="clickAdminTab" finished-at="2020-02-25T12:16:01 IST" duration-ms="1755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickAdminTab -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7]" started-at="2020-02-17T11:35:15 IST" name="teardown" finished-at="2020-02-17T11:35:18 IST" duration-ms="2456" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48]" started-at="2020-02-25T12:16:01 IST" name="teardown" finished-at="2020-02-25T12:16:02 IST" duration-ms="627" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickAdminTab status=SUCCESS method=CreateClass.clickAdminTab()[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7] output={null}]]]>
+                <![CDATA[[TestResult name=clickAdminTab status=SUCCESS method=ELTC026_CreateClass.clickAdminTab()[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="clickOnClassLink()[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7]" started-at="2020-02-17T11:35:18 IST" name="clickOnClassLink" finished-at="2020-02-17T11:35:23 IST" depends-on-methods="com.training.sanity.tests.CreateClass.clickAdminTab" duration-ms="4884" status="PASS">
+        <test-method signature="clickOnClassLink()[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48]" started-at="2020-02-25T12:16:02 IST" name="clickOnClassLink" finished-at="2020-02-25T12:16:05 IST" depends-on-methods="com.training.sanity.tests.ELTC026_CreateClass.clickAdminTab" duration-ms="3566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnClassLink -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7]" started-at="2020-02-17T11:35:23 IST" name="teardown" finished-at="2020-02-17T11:35:24 IST" duration-ms="1650" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48]" started-at="2020-02-25T12:16:05 IST" name="teardown" finished-at="2020-02-25T12:16:06 IST" duration-ms="678" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickOnClassLink status=SUCCESS method=CreateClass.clickOnClassLink()[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7] output={null}]]]>
+                <![CDATA[[TestResult name=clickOnClassLink status=SUCCESS method=ELTC026_CreateClass.clickOnClassLink()[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="clickOnAddButton()[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7]" started-at="2020-02-17T11:35:24 IST" name="clickOnAddButton" finished-at="2020-02-17T11:35:28 IST" depends-on-methods="com.training.sanity.tests.CreateClass.clickOnClassLink" duration-ms="3751" status="PASS">
+        <test-method signature="clickOnAddButton()[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48]" started-at="2020-02-25T12:16:06 IST" name="clickOnAddButton" finished-at="2020-02-25T12:16:07 IST" depends-on-methods="com.training.sanity.tests.ELTC026_CreateClass.clickOnClassLink" duration-ms="1142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnAddButton -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7]" started-at="2020-02-17T11:35:28 IST" name="teardown" finished-at="2020-02-17T11:35:30 IST" duration-ms="1610" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48]" started-at="2020-02-25T12:16:07 IST" name="teardown" finished-at="2020-02-25T12:16:08 IST" duration-ms="645" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickOnAddButton status=SUCCESS method=CreateClass.clickOnAddButton()[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7] output={null}]]]>
+                <![CDATA[[TestResult name=clickOnAddButton status=SUCCESS method=ELTC026_CreateClass.clickOnAddButton()[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="enterClassDetails()[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7]" started-at="2020-02-17T11:35:30 IST" name="enterClassDetails" finished-at="2020-02-17T11:35:54 IST" depends-on-methods="com.training.sanity.tests.CreateClass.clickOnAddButton" duration-ms="23771" status="PASS">
+        <test-method signature="enterClassDetails()[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48]" started-at="2020-02-25T12:16:08 IST" name="enterClassDetails" finished-at="2020-02-25T12:16:13 IST" depends-on-methods="com.training.sanity.tests.ELTC026_CreateClass.clickOnAddButton" duration-ms="5508" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterClassDetails -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7]" started-at="2020-02-17T11:35:54 IST" name="teardown" finished-at="2020-02-17T11:35:56 IST" duration-ms="2050" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48]" started-at="2020-02-25T12:16:13 IST" name="teardown" finished-at="2020-02-25T12:16:14 IST" duration-ms="520" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=enterClassDetails status=SUCCESS method=CreateClass.enterClassDetails()[pri:0, instance:com.training.sanity.tests.CreateClass@54c562f7] output={null}]]]>
+                <![CDATA[[TestResult name=enterClassDetails status=SUCCESS method=ELTC026_CreateClass.enterClassDetails()[pri:0, instance:com.training.sanity.tests.ELTC026_CreateClass@7c469c48] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.training.sanity.tests.CreateClass -->
+      </class> <!-- com.training.sanity.tests.ELTC026_CreateClass -->
+      <class name="com.training.sanity.tests.ELTC029_RemoveClasses">
+        <test-method signature="clickOnDeleteButton()[pri:0, instance:com.training.sanity.tests.ELTC029_RemoveClasses@1677d1]" started-at="2020-02-25T12:16:48 IST" name="clickOnDeleteButton" finished-at="2020-02-25T12:16:56 IST" duration-ms="7588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnDeleteButton -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC029_RemoveClasses@1677d1]" started-at="2020-02-25T12:16:56 IST" name="teardown" finished-at="2020-02-25T12:16:56 IST" duration-ms="530" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnDeleteButton status=SUCCESS method=ELTC029_RemoveClasses.clickOnDeleteButton()[pri:0, instance:com.training.sanity.tests.ELTC029_RemoveClasses@1677d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.training.sanity.tests.ELTC029_RemoveClasses -->
+      <class name="com.training.sanity.tests.ELTC030_LogoutTest">
+        <test-method signature="clickOnRecordDropdown()[pri:0, instance:com.training.sanity.tests.ELTC030_LogoutTest@161479c6]" started-at="2020-02-25T12:23:13 IST" name="clickOnRecordDropdown" finished-at="2020-02-25T12:23:16 IST" duration-ms="3356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnRecordDropdown -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC030_LogoutTest@161479c6]" started-at="2020-02-25T12:23:16 IST" name="teardown" finished-at="2020-02-25T12:23:17 IST" duration-ms="652" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickOnRecordDropdown status=SUCCESS method=ELTC030_LogoutTest.clickOnRecordDropdown()[pri:0, instance:com.training.sanity.tests.ELTC030_LogoutTest@161479c6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="clickLogoutButoon()[pri:0, instance:com.training.sanity.tests.ELTC030_LogoutTest@161479c6]" started-at="2020-02-25T12:23:17 IST" name="clickLogoutButoon" finished-at="2020-02-25T12:23:19 IST" depends-on-methods="com.training.sanity.tests.ELTC030_LogoutTest.clickOnRecordDropdown" duration-ms="1914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickLogoutButoon -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.training.sanity.tests.ELTC030_LogoutTest@161479c6]" started-at="2020-02-25T12:23:19 IST" name="teardown" finished-at="2020-02-25T12:23:19 IST" duration-ms="631" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickLogoutButoon status=SUCCESS method=ELTC030_LogoutTest.clickLogoutButoon()[pri:0, instance:com.training.sanity.tests.ELTC030_LogoutTest@161479c6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.training.sanity.tests.ELTC030_LogoutTest -->
     </test> <!-- Sample test -->
   </suite> <!-- Sample test Suite -->
 </testng-results>
