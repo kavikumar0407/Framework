@@ -31,7 +31,8 @@ public class LoginTests extends InitializeTest{
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		screenShot = new ScreenShot(driver);
+		loginPOM = new LoginPOM(driver); 
+       screenShot = new ScreenShot(driver);
 		
 		// Get current date and time to be used for Extent Reports folder creation
 		df = new SimpleDateFormat("dd-MM-yy_HH-mm");
@@ -47,7 +48,6 @@ public class LoginTests extends InitializeTest{
 		report = new ExtentReports();
 		report.attachReporter(htmlReporter);
 		
-		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
 		
 		// open the browser 

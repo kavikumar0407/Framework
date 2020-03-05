@@ -14,7 +14,6 @@ import com.training.pom.ELTC060_CreateUserSubscribeUserToClassPOM;
 public class ELTC060_CreateUserSubscribeUserToClass extends InitializeTest{
 	
 	ELTC060_CreateUserSubscribeUserToClassPOM createUserSubscribeUserToClassPOM;
-	ELTC059_CreateCourseSubscribeUser eltc;
 	
 
 	 @Test
@@ -24,7 +23,7 @@ public class ELTC060_CreateUserSubscribeUserToClass extends InitializeTest{
 		 DateTime = df.format(dateNow);
 		 DateTimeCode = df2.format(dateNow);
 		 createUserSubscribeUserToClassPOM = new ELTC060_CreateUserSubscribeUserToClassPOM(driver);
-         eltc = new ELTC059_CreateCourseSubscribeUser();
+        
 		  logger = report.createTest("ELTC060 - Click on Admin tab");
 		  
 		  // Click on Admin Tab

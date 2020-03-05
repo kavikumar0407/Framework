@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/6d3843c29c354373fafad29c03a1a89b7e06c374/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Mar 5, 2020 01:33:14 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.6</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='74.074%'><span class='strong'>20</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='25.926%'>7</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='58.065%'><span class='strong'>18</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='22.581%'>7</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='19.355%'>6</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Log into ELearning website</span>
+						<span class='test-time'>Mar 5, 2020 01:33:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:20 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+239ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:24 PM</td>
+					<td class='step-details'>The status of validLoginTest is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/validLoginTest05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/validLoginTest05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/validLoginTest05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC026 - Click on Admin Tab</span>
+						<span class='test-time'>Mar 5, 2020 01:33:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:25 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+741ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:27 PM</td>
+					<td class='step-details'>The status of clickAdminTab is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickAdminTab05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickAdminTab05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickAdminTab05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC026 - Click on Class Link</span>
+						<span class='test-time'>Mar 5, 2020 01:33:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:27 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Click on Class link and navigate to list of classes view</span>
+						<span class='test-time'>Mar 5, 2020 01:33:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:27 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+362ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:30 PM</td>
+					<td class='step-details'>The status of clickOnClassLink is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnClassLink05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnClassLink05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnClassLink05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC026 - Click on Add Button</span>
+						<span class='test-time'>Mar 5, 2020 01:33:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:31 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+922ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:32 PM</td>
+					<td class='step-details'>The status of clickOnAddButton is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAddButton05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAddButton05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAddButton05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC026 - Enter the class details</span>
+						<span class='test-time'>Mar 5, 2020 01:33:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:32 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+530ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:36 PM</td>
+					<td class='step-details'>Class name is entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:36 PM</td>
+					<td class='step-details'>Description is entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:36 PM</td>
+					<td class='step-details'>Goup Permission dropdown is selected</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:38 PM</td>
+					<td class='step-details'>Add class button is clicked</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:38 PM</td>
+					<td class='step-details'>The status of enterClassDetails is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/enterClassDetails05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/enterClassDetails05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/enterClassDetails05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC027 - Click on subscribe user to class button</span>
+						<span class='test-time'>Mar 5, 2020 01:33:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:38 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+44ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:47 PM</td>
+					<td class='step-details'>The status of clickonSubscribeUserButton is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickonSubscribeUserButton05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickonSubscribeUserButton05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickonSubscribeUserButton05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC027 - Select 2 user records to be added</span>
+						<span class='test-time'>Mar 5, 2020 01:33:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:48 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+446ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:48 PM</td>
+					<td class='step-details'>The status of selectUsers is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectUsers05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectUsers05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectUsers05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC027 - Click on subscribe button to subscribe users</span>
+						<span class='test-time'>Mar 5, 2020 01:33:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:48 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:33:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+655ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:57 PM</td>
+					<td class='step-details'>The status of subscribeUsersToClass is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/subscribeUsersToClass05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/subscribeUsersToClass05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/subscribeUsersToClass05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC028 - Click on subscribe course to class button</span>
+						<span class='test-time'>Mar 5, 2020 01:33:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:33:58 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+961ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:03 PM</td>
+					<td class='step-details'>The status of clickonSubscribeCourseButton is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickonSubscribeCourseButton05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickonSubscribeCourseButton05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickonSubscribeCourseButton05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC028 - Select 2 courses records to be added</span>
+						<span class='test-time'>Mar 5, 2020 01:34:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:03 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+415ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:03 PM</td>
+					<td class='step-details'>The status of selectCourses is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectCourses05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectCourses05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectCourses05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC028 - Click on subscribe button to subscribe courses</span>
+						<span class='test-time'>Mar 5, 2020 01:34:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:04 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+302ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:11 PM</td>
+					<td class='step-details'>The status of subscribeCoursesToClass is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/subscribeCoursesToClass05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/subscribeCoursesToClass05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/subscribeCoursesToClass05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC029 - Delete the created class</span>
+						<span class='test-time'>Mar 5, 2020 01:34:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:12 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+885ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:24 PM</td>
+					<td class='step-details'>The status of clickOnDeleteButton is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnDeleteButton05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnDeleteButton05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnDeleteButton05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC056 - Click on Admin tab</span>
+						<span class='test-time'>Mar 5, 2020 01:34:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:25 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+935ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:26 PM</td>
+					<td class='step-details'>The status of clickOnAdminTab is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC056 - Click on Sessions Categories List Link</span>
+						<span class='test-time'>Mar 5, 2020 01:34:26 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:26 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+120ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:30 PM</td>
+					<td class='step-details'>The status of clickOnSessionsCategoriesListLink is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnSessionsCategoriesListLink05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnSessionsCategoriesListLink05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnSessionsCategoriesListLink05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC056 - Click On Training Sessions List Icon</span>
+						<span class='test-time'>Mar 5, 2020 01:34:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:31 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+26ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:32 PM</td>
+					<td class='step-details'>The status of clickOnTrainingSessionsListIcon is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnTrainingSessionsListIcon05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnTrainingSessionsListIcon05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnTrainingSessionsListIcon05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC056 - Select User And SubscribeUser To Session</span>
+						<span class='test-time'>Mar 5, 2020 01:34:32 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:32 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+851ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:34:36 PM</td>
+					<td class='step-details'>Searched for session created before</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:34:38 PM</td>
+					<td class='step-details'>Closed the Search Widget</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:34:41 PM</td>
+					<td class='step-details'>The status of selectUserAndSubscribeUserToSession  FAIL</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectUserAndSubscribeUserToSession05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectUserAndSubscribeUserToSession05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/selectUserAndSubscribeUserToSession05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC057 - Click on Admin tab</span>
+						<span class='test-time'>Mar 5, 2020 01:34:42 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:42 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+37ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:48 PM</td>
+					<td class='step-details'>The status of clickOnAdminTab is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC057 - Click on Careers and Promotions Link</span>
+						<span class='test-time'>Mar 5, 2020 01:34:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:48 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:34:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+242ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:34:51 PM</td>
+					<td class='step-details'>The status of clickOnCareersPromotionsLink is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnCareersPromotionsLink05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnCareersPromotionsLink05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnCareersPromotionsLink05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC057 - Click on Career icon and create a new career</span>
+						<span class='test-time'>Mar 5, 2020 01:34:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:34:52 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:35:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+841ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:35:02 PM</td>
+					<td class='step-details'>The status of createCareer is PASS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/createCareer05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/createCareer05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/createCareer05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC057 - Click on Promotion icon and create a new promotion</span>
+						<span class='test-time'>Mar 5, 2020 01:35:02 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:35:02 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:35:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 41s+558ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:35:44 PM</td>
+					<td class='step-details'>The status of createPromotion  FAIL</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/createPromotion05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/createPromotion05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/createPromotion05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC058 - Click on Admin tab</span>
+						<span class='test-time'>Mar 5, 2020 01:35:44 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:35:44 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:36:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+45ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:36:14 PM</td>
+					<td class='step-details'>The status of clickOnAdminTab  FAIL</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC059 - Click on Admin tab</span>
+						<span class='test-time'>Mar 5, 2020 01:36:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:36:15 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:36:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+66ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:36:47 PM</td>
+					<td class='step-details'>The status of clickOnAdminTab  FAIL</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC060 - Click on Admin tab</span>
+						<span class='test-time'>Mar 5, 2020 01:36:47 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:36:47 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:37:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+99ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:37:17 PM</td>
+					<td class='step-details'>The status of clickOnAdminTab  FAIL</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnAdminTab05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>ELTC030 - Click on record dropdown to get Logout option</span>
+						<span class='test-time'>Mar 5, 2020 01:37:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:37:18 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:37:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+43ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:37:51 PM</td>
+					<td class='step-details'>The status of clickOnRecordDropdown  FAIL</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnRecordDropdown05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnRecordDropdown05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/clickOnRecordDropdown05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Enter invalid user details and confirm if error is displayed</span>
+						<span class='test-time'>Mar 5, 2020 01:37:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:37:53 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:37:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Compare data entered in GUI with DB data</span>
+						<span class='test-time'>Mar 5, 2020 01:38:27 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 5, 2020 01:38:27 PM</span>
+	<span class='label end-time'>Mar 5, 2020 01:38:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+61ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:38:57 PM</td>
+					<td class='step-details'>The status of compareGUIDataWithDBData  FAIL</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/compareGUIDataWithDBData05-03-20_13-33.png' width='10%' src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/compareGUIDataWithDBData05-03-20_13-33.png' data-src='C:\Users\KAVITAKUMAR\git\Framework\final-framework-testng/Reports05-03-20_13-33/Screenshots/compareGUIDataWithDBData05-03-20_13-33.png'></li>
+							</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>27</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>31</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 5, 2020 01:33:14 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 5, 2020 01:38:57 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>343,090ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 20,
+				failParent: 7,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 7,
+				
+				passChild: 18,
+				failChild: 7,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 6,
+				exceptionsChild: 7,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/5ed7b0c339b51aa347b44ccaa2e2ff29905b2f9f/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>

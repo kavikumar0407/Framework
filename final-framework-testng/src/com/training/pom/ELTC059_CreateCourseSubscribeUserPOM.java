@@ -160,7 +160,8 @@ public class ELTC059_CreateCourseSubscribeUserPOM {
 	
 	 public void clickOnAdminTabButton() throws InterruptedException
 	    {
-		  this.AdminTabButton.click();
+		 Thread.sleep(2000); 
+		 this.AdminTabButton.click();
 		  Thread.sleep(2000);
 		  this.CloseAlert.click();
 		

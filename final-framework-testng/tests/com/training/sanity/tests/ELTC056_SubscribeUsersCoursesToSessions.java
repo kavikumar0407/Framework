@@ -37,6 +37,7 @@ public class ELTC056_SubscribeUsersCoursesToSessions extends InitializeTest{
 	  logger = report.createTest("ELTC056 - Click on Sessions Categories List Link");
 	  // Click on Sessions Categories List
 	  // Closing the Alert as sometimes the click is getting interesected
+	  Thread.sleep(2000);
 	  subscribeUsersCoursesToSessionsPOM.clickOnCloseAlert();
 	  Thread.sleep(1000);
 	   System.out.println("Ready to click");
@@ -59,6 +60,7 @@ public class ELTC056_SubscribeUsersCoursesToSessions extends InitializeTest{
   {
 	  logger = report.createTest("ELTC056 - Select User And SubscribeUser To Session");
 	  //Navigate to pre-created session. The steps to create a new session not listed under this testcase.
+	  Thread.sleep(2000);
 	  subscribeUsersCoursesToSessionsPOM.sendTextToSearchInputBox(storedSessionName);
 	  subscribeUsersCoursesToSessionsPOM.clickOnSearchSubmitButton();
 	  logger.log(Status.INFO, "Searched for session created before");
@@ -71,7 +73,7 @@ public class ELTC056_SubscribeUsersCoursesToSessions extends InitializeTest{
 		  subscribeUsersCoursesToSessionsPOM.clickOnSubscribeUserToSessionIcon();
 		  
     // enter 'sunil' in search text input box
-	 subscribeUsersCoursesToSessionsPOM.enterUserInSearchTextArea("sunil");
+	 subscribeUsersCoursesToSessionsPOM.enterUserInSearchTextArea("kumar sunil");
 	 // Select the option from the list displayed
 	 Thread.sleep(2000);
 	 subscribeUsersCoursesToSessionsPOM.selectUserFromList();  

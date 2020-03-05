@@ -109,8 +109,10 @@ public class ELTC059_CreateCourseSubscribeUser extends InitializeTest {
 			Thread.sleep(2000);
 			createCourseSubscribeUserPOM.clickOnSubscribeUsersIcon(ClassName);
 			createCourseSubscribeUserPOM.selectUsersFromList();
+			Thread.sleep(2000);
 			// Assert will check if the count of users against the class name have been increased
 			createCourseSubscribeUserPOM.clickNameSortHeader();
+			Thread.sleep(2000);
 			  Assert.assertTrue(createCourseSubscribeUserPOM.confirmUsersSubscribedToClass(ClassName));
 		  }
 			  

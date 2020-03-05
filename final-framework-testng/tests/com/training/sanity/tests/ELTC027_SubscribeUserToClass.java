@@ -32,7 +32,8 @@ public class ELTC027_SubscribeUserToClass extends InitializeTest{
 	   //Pass the stored class name to this method
 	   // It will look for all the td elements with this title
 	   // for loop created in POM to select the correct record and go to it's following-sibling and click the subscribe button
-	  subscribeUserToClassPOM.findClassInList(storedClassName);
+	   System.out.println("what" + ClassName);
+	  subscribeUserToClassPOM.findClassInList(ClassName);
 	  
 	  Assert.assertTrue(subscribeUserToClassPOM.confirmSubscribeUsersButtonClicked());
 	  
@@ -63,7 +64,7 @@ public class ELTC027_SubscribeUserToClass extends InitializeTest{
 	  subscribeUserToClassPOM.clickNameSortHeader();
 	  
 	  // Assert will check if the count of users against the class name have been increased
-	  Assert.assertTrue(subscribeUserToClassPOM.confirmUsersSubscribedToClass(storedClassName));
+	  Assert.assertTrue(subscribeUserToClassPOM.confirmUsersSubscribedToClass(ClassName));
   }
  
   @AfterMethod

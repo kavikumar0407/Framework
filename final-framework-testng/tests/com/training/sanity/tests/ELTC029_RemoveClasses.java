@@ -25,13 +25,13 @@ public class ELTC029_RemoveClasses extends InitializeTest{
 	  logger = report.createTest("ELTC029 - Delete the created class");
 	 // removeClassesPOM.clickNameSortHeaderInDeleteView();
 	  
-	  removeClassesPOM.clickOnDeleteButton(storedClassName);
+	  removeClassesPOM.clickOnDeleteButton(ClassName);
 	  
 	  //This method will accept the alert that is thrown by the application
 	  removeClassesPOM.acceptAlert();
 	  Thread.sleep(2000);
 	  removeClassesPOM.clickNameSortHeaderInDeleteView();
-	  Assert.assertTrue(removeClassesPOM.confirmIfClassDeleted(storedClassName));
+	  Assert.assertTrue(removeClassesPOM.confirmIfClassDeleted(ClassName));
   }
   
   @AfterMethod

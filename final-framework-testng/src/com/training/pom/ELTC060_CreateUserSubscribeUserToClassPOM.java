@@ -258,7 +258,7 @@ public class ELTC060_CreateUserSubscribeUserToClassPOM {
 		 
 		 public void clickOnSubscribeUsersIcon(String className) throws InterruptedException
 			{
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 				boolean ans = false;
 				this.sortNameHeader.click();
 				Thread.sleep(2000);

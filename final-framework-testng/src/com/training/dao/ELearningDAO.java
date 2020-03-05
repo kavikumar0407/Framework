@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Properties;
 
 import com.training.bean.LoginBean;
+import com.training.bean.UserBean;
 import com.training.connection.GetConnection;
 import com.training.utility.LoadDBDetails;
 
@@ -54,8 +55,80 @@ public class ELearningDAO {
 		return list; 
 	}
 	
+	public List<UserBean> getUserDetails(){
+        String sql = properties.getProperty("get.userDetails"); 
+		
+		GetConnection gc  = new GetConnection(); 
+		List<UserBean> list = null;
+		try {
+			gc.ps1 = GetConnection.getMySqlConnection(LoadDBDetails.getDBDetails()).prepareStatement(sql); 
+            list = new ArrayList<UserBean>(); 
+			
+			gc.rs1 = gc.ps1.executeQuery(); 
+			
+			while(gc.rs1.next()) {
+			   
+				UserBean temp = new UserBean(); 
+				
+				temp.setFirstname(gc.rs1.getString(1));
+				temp.setLastname(gc.rs1.getString(2));
+				temp.setEmail(gc.rs1.getString(3));
+				temp.setProfile(gc.rs1.getString(4));
+				temp.setUsername(gc.rs1.getString(5));
+				temp.setPassword(gc.rs1.getString(6));
+				temp.setPasswordConfirm(gc.rs1.getString(7));
+				temp.setLanguage(gc.rs1.getString(8));
+
+				list.add(temp); 
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+			
+			
+	}
+	
+	public List<UserBean> getUserDetailsForComparison(){
+        String sql = properties.getProperty("get.userDetailsForComparison"); 
+		
+		GetConnection gc  = new GetConnection(); 
+		List<UserBean> list = null;
+		try {
+			gc.ps1 = GetConnection.getMySqlConnection(LoadDBDetails.getDBDetails()).prepareStatement(sql); 
+            list = new ArrayList<UserBean>(); 
+			
+			gc.rs1 = gc.ps1.executeQuery(); 
+			
+			while(gc.rs1.next()) {
+			   
+				UserBean temp = new UserBean(); 
+				
+				temp.setFirstname(gc.rs1.getString(1));
+				temp.setLastname(gc.rs1.getString(2));
+				temp.setEmail(gc.rs1.getString(3));
+				temp.setProfile(gc.rs1.getString(4));
+				temp.setUsername(gc.rs1.getString(5));
+				temp.setPassword(gc.rs1.getString(6));
+				temp.setPasswordConfirm(gc.rs1.getString(7));
+				temp.setLanguage(gc.rs1.getString(8));
+
+				list.add(temp); 
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+			
+			
+	}
+	
 	public static void main(String[] args) {
 		new ELearningDAO().getLogins().forEach(System.out :: println);
+		new ELearningDAO().getUserDetails().forEach(System.out :: println);
+		new ELearningDAO().getUserDetailsForComparison().forEach(System.out :: println);
 	}
 	
 	

@@ -3,14 +3,78 @@
 <suite name="Failed suite [Sample test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Sample test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.AddCourseToClass">
+      <class name="com.training.sanity.tests.ELTC058_CreateCourseSession">
         <methods>
-          <include name="subscribeCoursesToClass"/>
+          <include name="enterDetailsToCreateNewCourse"/>
+          <include name="clickOnAdminTab"/>
+          <include name="clickOnAddTrainingSession"/>
+          <include name="clickOnCreateNewCourseLink"/>
           <include name="teardown"/>
-          <include name="selectCourses"/>
-          <include name="clickonSubscribeCourseButton"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.AddCourseToClass -->
+      </class> <!-- com.training.sanity.tests.ELTC058_CreateCourseSession -->
+      <class name="com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions">
+        <methods>
+          <include name="clickOnAdminTab"/>
+          <include name="clickOnTrainingSessionsListIcon"/>
+          <include name="selectUserAndSubscribeUserToSession"/>
+          <include name="teardown"/>
+          <include name="selectAndAddCourseToSession"/>
+          <include name="clickOnSessionsCategoriesListLink"/>
+        </methods>
+      </class> <!-- com.training.sanity.tests.ELTC056_SubscribeUsersCoursesToSessions -->
+      <class name="com.training.regression.tests.ELTC077_InvalidUserDetailsTest">
+        <methods>
+          <include name="enterInvalidUserDetails" invocation-numbers="0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.training.regression.tests.ELTC077_InvalidUserDetailsTest -->
+      <class name="com.training.sanity.tests.ELTC057_CareerPromotions">
+        <methods>
+          <include name="clickOnAdminTab"/>
+          <include name="createTrainingSession"/>
+          <include name="createPromotion"/>
+          <include name="clickOnCareersPromotionsLink"/>
+          <include name="teardown"/>
+          <include name="createCareer"/>
+        </methods>
+      </class> <!-- com.training.sanity.tests.ELTC057_CareerPromotions -->
+      <class name="com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser">
+        <methods>
+          <include name="clickOnClassLink"/>
+          <include name="clickOnAdminTab"/>
+          <include name="createNewClass"/>
+          <include name="subscribeCourseToClass"/>
+          <include name="enterDetailsToCreateNewCourse"/>
+          <include name="clickOnCreateNewCourseLink"/>
+          <include name="teardown"/>
+          <include name="subscribeUserToClass"/>
+        </methods>
+      </class> <!-- com.training.sanity.tests.ELTC059_CreateCourseSubscribeUser -->
+      <class name="com.training.sanity.tests.ELTC030_LogoutTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="clickOnRecordDropdown"/>
+          <include name="clickLogoutButoon"/>
+        </methods>
+      </class> <!-- com.training.sanity.tests.ELTC030_LogoutTest -->
+      <class name="com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass">
+        <methods>
+          <include name="subscribeUserToClass"/>
+          <include name="createNewClass"/>
+          <include name="clickOnAdminTab"/>
+          <include name="enterUserDetails"/>
+          <include name="clickOnClassLink"/>
+          <include name="clickOnCreateNewUserLink"/>
+          <include name="teardown"/>
+          <include name="subscribeCourseToClass"/>
+        </methods>
+      </class> <!-- com.training.sanity.tests.ELTC060_CreateUserSubscribeUserToClass -->
+      <class name="com.training.regression.tests.ELTC078_CompareDBwithGUI">
+        <methods>
+          <include name="teardown"/>
+          <include name="compareGUIDataWithDBData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.training.regression.tests.ELTC078_CompareDBwithGUI -->
     </classes>
   </test> <!-- Sample test(failed) -->
 </suite> <!-- Failed suite [Sample test Suite] -->

@@ -28,7 +28,7 @@ public class ELTC028_AddCourseToClass extends InitializeTest{
 			   // for loop created in POM to select the correct record and go to it's following-sibling and click the subscribe button
 			 // subscribeCourseToClassPOM.clickNameSortHeader();
 			  
-		 addCourseToClassPOM.clickSubscribeCourseButton(storedClassName);
+		 addCourseToClassPOM.clickSubscribeCourseButton(ClassName);
 			  
 		 Assert.assertTrue(addCourseToClassPOM.confirmSubscribeCourseButtonClicked());
 			  
@@ -59,7 +59,7 @@ public class ELTC028_AddCourseToClass extends InitializeTest{
 			  addCourseToClassPOM.clickNameSortHeader();
 			  
 			  // Assert will check if the count of courses against the class name have been increased
-			  Assert.assertTrue(addCourseToClassPOM.confirmCoursesSubscribedToClass(storedClassName));
+			  Assert.assertTrue(addCourseToClassPOM.confirmCoursesSubscribedToClass(ClassName));
 		  }
 		 
 		  

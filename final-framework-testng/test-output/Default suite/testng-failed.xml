@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.LogoutTest">
+      <class name="com.training.regression.tests.ELTC077_InvalidUserDetailsTest">
         <methods>
-          <include name="setUpBeforeClass"/>
+          <include name="enterInvalidUserDetails" invocation-numbers="0"/>
           <include name="teardown"/>
-          <include name="clickOnRecordDropdown"/>
-          <include name="clickLogoutButoon"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.LogoutTest -->
+      </class> <!-- com.training.regression.tests.ELTC077_InvalidUserDetailsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

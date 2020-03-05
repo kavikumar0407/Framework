@@ -49,11 +49,11 @@ public class ELTC057_CareerPromotions extends InitializeTest{
 		  careerPromotionsPOM.clickOnCareerIcon();
 		  careerPromotionsPOM.clickOnAddCareerButton();
 		  // Enter Name with unique suffix
-		  careerPromotionsPOM.clickCareerNameInputBox("QA_"+DateTime);
+		  careerPromotionsPOM.clickCareerNameInputBox("1_QA_"+DateTime);
 		  careerPromotionsPOM.clickOnSubmitNewCareer();
 		  Thread.sleep(2000);
 		  // Sort the list to look for the newly created career
-		  careerPromotionsPOM.clickOnSortCareerNames();
+		 // careerPromotionsPOM.clickOnSortCareerNames();
 		  Thread.sleep(2000);
 		  Assert.assertTrue(careerPromotionsPOM.confirmIfCareerCreated());
 				 
@@ -94,6 +94,7 @@ public class ELTC057_CareerPromotions extends InitializeTest{
 		  careerPromotionsPOM.clickOnClickNextStepButton();
 		  // Select course and user to subscribe, inclusive methods created in POM
 		  careerPromotionsPOM.selectCourse();
+		  
 		  careerPromotionsPOM.selectUser("sunil");
 		  		  
 		  Thread.sleep(2000);

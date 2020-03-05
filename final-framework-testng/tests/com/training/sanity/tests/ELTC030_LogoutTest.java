@@ -28,6 +28,7 @@ public class ELTC030_LogoutTest extends InitializeTest {
 	  Thread.sleep(3000);
 	  System.out.println("goign to click drodown");
 	  logoutTestPOM.clickRecordDropdown();
+	  Thread.sleep(3000);
 	  Assert.assertTrue(logoutTestPOM.confirmMenuOptionsVisible());
   }
   

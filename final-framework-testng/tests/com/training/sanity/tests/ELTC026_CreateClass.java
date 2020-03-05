@@ -63,7 +63,7 @@ public class ELTC026_CreateClass extends InitializeTest{
 	  // Create new class by entering details. Used DateTime string which holds the current Date and time for clarity purposes.
 	  createClassPOM.sendClassName("1demo_Kavita_" + DateTime);
 	  logger.info("Class name is entered");
-	  storedClassName = createClassPOM.storeClassName();
+	  ClassName = createClassPOM.storeClassName();
 	  createClassPOM.sendClassDesc("demo");
 	  logger.info("Description is entered");
 	  createClassPOM.selectGroupPermissions("Open");

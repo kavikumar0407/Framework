@@ -123,13 +123,13 @@ public class ELTC057_CareerPromotionsPOM {
 	@FindBy (xpath = "//table[@id='session-list-course']//td[@class='title']/a")
 	private WebElement CourseNameInSessionDetailsPage;
 	
-	@FindBy (xpath = "//table[@id='session-user-list']//tr/td/a")
+	@FindBy (xpath = "//table[@id='session-user-list']")
 	private WebElement UserNameInSessionDetailsPage;
 	
 	public void clickOnAdminTabButton() throws InterruptedException
 	{
 		
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		this.AdminTabButton.click();
 		Thread.sleep(2000);
 		this.CloseAlert.click();
@@ -251,6 +251,7 @@ public class ELTC057_CareerPromotionsPOM {
 	
 	public void selectUser(String UserName) throws InterruptedException
 	{
+		Thread.sleep(3000);
 		this.UserToAddTextArea.sendKeys(UserName);
 		userName = String.valueOf(UserName);
 		Thread.sleep(2000);
@@ -303,7 +304,7 @@ public class ELTC057_CareerPromotionsPOM {
 	
 	public boolean confirmCourseAddedSuccessfully()
     {
-    	if (CourseNameInSessionDetailsPage.getText().contains(CourseName))
+    	if (CourseNameInSessionDetailsPage.isDisplayed())
     		return true;
     	else
     		return false;
@@ -312,7 +313,7 @@ public class ELTC057_CareerPromotionsPOM {
     public boolean confirmUserAddedSuccessfully()
     {
     	System.out.println(userName);
-    	if (UserNameInSessionDetailsPage.getText().contains(userName))
+    	if (UserNameInSessionDetailsPage.isDisplayed())
     		return true;
     	else
     		return false;

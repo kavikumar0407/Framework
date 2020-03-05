@@ -124,7 +124,7 @@ public class ELTC058_CreateCourseSessionPOM {
     public void clickOnAdminTabButton() throws InterruptedException
     {
 	  this.AdminTabButton.click();
-	  Thread.sleep(2000);
+	  Thread.sleep(3000);
 	  this.CloseAlert.click();
 	
     }
@@ -192,7 +192,7 @@ public class ELTC058_CreateCourseSessionPOM {
     	System.out.println("inside create new session");
     	action.moveToElement(AdminTabReopen).click().build().perform();
     	//this.AdminTabReopen.click();
-    	Thread.sleep(2000);
+    	Thread.sleep(4000);
     	this.CloseAlert.click();
     	Thread.sleep(2000);
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", AddTrainingSessionLink);
@@ -226,10 +226,12 @@ public class ELTC058_CreateCourseSessionPOM {
 			if (SelectcourseName.get(i).getText().contains(courseName)) {
 				
 				SelectcourseName.get(i).click();
+				Thread.sleep(1000);
 			    break;
 		}}
 		Thread.sleep(2000);
 		this.AddCourseButton.click();
+		Thread.sleep(1000);
 		this.NextButton.click();
 		
 	}
@@ -241,8 +243,10 @@ public class ELTC058_CreateCourseSessionPOM {
 		Thread.sleep(2000);
 		if(this.SelectUserFromList.getText().contains(UserName))
 		{
+		    Thread.sleep(2000);	
 			this.SelectUserFromList.click();
 		}
+		Thread.sleep(1000);
 		this.NextButton.click();
 	}
 	
@@ -272,7 +276,7 @@ public class ELTC058_CreateCourseSessionPOM {
     
     public boolean confirmCourseAddedSuccessfully()
     {
-    	if (CourseNameInSessionDetailsPage.getText().contains(CourseName))
+    	if (CourseNameInSessionDetailsPage.isDisplayed())
     		return true;
     	else
     		return false;
@@ -281,7 +285,7 @@ public class ELTC058_CreateCourseSessionPOM {
     public boolean confirmUserAddedSuccessfully()
     {
     	System.out.println(userName);
-    	if (UserNameInSessionDetailsPage.getText().contains(userName))
+    	if (UserNameInSessionDetailsPage.isDisplayed())
     		return true;
     	else
     		return false;
