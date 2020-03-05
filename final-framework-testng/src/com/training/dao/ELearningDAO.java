@@ -59,10 +59,10 @@ public class ELearningDAO {
         String sql = properties.getProperty("get.userDetails"); 
 		
 		GetConnection gc  = new GetConnection(); 
-		List<UserBean> list = null;
+		List<UserBean> list1 = null;
 		try {
 			gc.ps1 = GetConnection.getMySqlConnection(LoadDBDetails.getDBDetails()).prepareStatement(sql); 
-            list = new ArrayList<UserBean>(); 
+            list1 = new ArrayList<UserBean>(); 
 			
 			gc.rs1 = gc.ps1.executeQuery(); 
 			
@@ -79,13 +79,13 @@ public class ELearningDAO {
 				temp.setPasswordConfirm(gc.rs1.getString(7));
 				temp.setLanguage(gc.rs1.getString(8));
 
-				list.add(temp); 
+				list1.add(temp); 
 				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return list;
+		return list1;
 			
 			
 	}

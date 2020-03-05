@@ -75,7 +75,7 @@ private WebDriver driver;
 	
 	public String getLastName() throws InterruptedException
 	{
-		Thread.sleep(2000);
+	
 		return this.LastNameInputBox.getAttribute("value");
 	}
 	
@@ -86,7 +86,7 @@ private WebDriver driver;
 	
 	public String getEmail() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		
 		return this.EmailInputBox.getAttribute("value");
 	}
 	
@@ -101,7 +101,7 @@ private WebDriver driver;
 	
 	public String getProfile() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		
 		if (ProfileTeacherRadioButton.isSelected())
 		      return "Teacher";
 		else
@@ -126,7 +126,7 @@ private WebDriver driver;
 	
 	public String getPassword() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		
 		return this.PasswordInputBox.getAttribute("value");
 	}
 	
@@ -137,7 +137,7 @@ private WebDriver driver;
 	
 	public String getConfirmPassword() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		
 		return this.ConfirmPasswordInputBox.getAttribute("value");
 	}
 	
@@ -149,7 +149,7 @@ private WebDriver driver;
 	
 	public String getLanguage() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		
 		return this.LaguageDropDownBox.getText();
 	}
 	

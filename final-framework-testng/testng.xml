@@ -7,9 +7,9 @@
            <class name = "com.training.sanity.tests.LoginTests" />
       
            <class name = "com.training.sanity.tests.ELTC030_LogoutTest" />
-           <class name = "com.training.regression.tests.ELTC076_SignUpUserAsTeacher" />
-        
-          
+            <class name = "com.training.regression.tests.ELTC076_SignUpUserAsTeacher" />
+           <class name = "com.training.regression.tests.ELTC077_InvalidUserDetailsTest" />
+          <class name = "com.training.regression.tests.ELTC078_CompareDBwithGUI" />
          
       </classes>
    </test>
